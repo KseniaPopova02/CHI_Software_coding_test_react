@@ -1,3 +1,44 @@
+@media (max-width: 1040px) {
+  .loan__investment-form {
+    flex-direction: column;
+  }
+  .loan__investment-input {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .loans {
+    flex-direction: column;
+  }
+  .loan__popup {
+    &-title {
+      padding-bottom: 0;
+      font-size: 27px;
+      p {
+        padding: 0;
+      }
+    }
+    &-suptitle {
+      padding-bottom: 0;
+    }
+  }
+
+  .loan__investment {
+    margin-top: 0;
+    &-subtitle {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .loan__popup-wrapper {
+    padding: 15px;
+    width: 85vw;
+  }
+}
+
 @media (max-width: 590px) {
   .header__title {
     font-size: 22px;
@@ -27,9 +68,18 @@
   .total {
     flex-direction: column;
   }
+
+  .loan__popup {
+    &-title {
+      font-size: 27px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
+  .header__title {
+    font-size: 18px;
+  }
   .loans {
     flex-direction: column;
     &__invest {

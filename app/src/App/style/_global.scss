@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  // overflow-y: hidden;
 }
 
 *,
@@ -30,6 +31,7 @@ h6 {
 
 body {
   @extend %inter-medium;
+  position: relative;
   color: #303247;
   font-size: 20px;
   line-height: 24px;

@@ -24,7 +24,7 @@
   font-weight: 500;
 }
 
-.total, .loans__invest, .loans__title, .header__title {
+.loan__investment-subtitle, .total, .loans__invest, .loans__title, .header__title {
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
@@ -60,6 +60,7 @@ h6 {
 }
 
 body {
+  position: relative;
   color: #303247;
   font-size: 20px;
   line-height: 24px;
@@ -110,6 +111,11 @@ body {
   text-align: end;
   padding-bottom: 13px;
 }
+.loans__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .total {
   display: flex;
@@ -119,6 +125,138 @@ body {
   padding-right: 10px;
 }
 
+.loan__popup-cross {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.loan__popup-cross button {
+  background-color: transparent;
+  border: none;
+}
+.loan__popup-cross:hover {
+  opacity: 1;
+}
+.loan__popup-cross :before,
+.loan__popup-cross :after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 22px;
+  width: 2px;
+  background-color: #303247;
+}
+.loan__popup-cross :before {
+  transform: rotate(45deg);
+}
+.loan__popup-cross :after {
+  transform: rotate(-45deg);
+}
+
+.loan__popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.loan__popup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.8);
+}
+.loan__popup-wrapper {
+  margin: 64px;
+  width: 50vw;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #fff;
+  z-index: 1000;
+  color: #303247;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 64px;
+}
+.loan__popup-title {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
+  padding-bottom: 32px;
+}
+.loan__popup-suptitle {
+  padding-bottom: 32px;
+}
+.loan__popup-info p {
+  padding-bottom: 8px;
+}
+
+.loan__investment {
+  margin-top: 64px;
+}
+.loan__investment-subtitle {
+  font-size: 30px;
+  line-height: 36px;
+  padding-bottom: 30px;
+}
+.loan__investment-form {
+  display: flex;
+  justify-content: space-between;
+}
+.loan__investment-input {
+  padding: 16px 32px;
+  border: 1px solid rgba(48, 50, 71, 0.1);
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 32px;
+}
+
+@media (max-width: 1040px) {
+  .loan__investment-form {
+    flex-direction: column;
+  }
+  .loan__investment-input {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .loans {
+    flex-direction: column;
+  }
+  .loan__popup-title {
+    padding-bottom: 0;
+    font-size: 27px;
+  }
+  .loan__popup-title p {
+    padding: 0;
+  }
+  .loan__popup-suptitle {
+    padding-bottom: 0;
+  }
+  .loan__investment {
+    margin-top: 0;
+  }
+  .loan__investment-subtitle {
+    font-size: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .loan__popup-wrapper {
+    padding: 15px;
+    width: 85vw;
+  }
+}
 @media (max-width: 590px) {
   .header__title {
     font-size: 22px;
@@ -147,8 +285,14 @@ body {
   .total {
     flex-direction: column;
   }
+  .loan__popup-title {
+    font-size: 27px;
+  }
 }
 @media (max-width: 450px) {
+  .header__title {
+    font-size: 18px;
+  }
   .loans {
     flex-direction: column;
   }
