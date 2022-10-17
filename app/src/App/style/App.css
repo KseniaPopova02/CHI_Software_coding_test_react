@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../style/fonts/Inter-Regular.ttf") format("ttf"), url("../style/fonts/Inter-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../style/fonts/Inter-Medium.ttf") format("ttf"), url("../style/fonts/Inter-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../style/fonts/Inter-SemiBold.ttf") format("ttf"), url("../style/fonts/Inter-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.loans__btn, body {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.total, .loans__invest, .loans__title, .header__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  color: #303247;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.container {
+  padding: 32px 64px;
+}
+
+.border__bottom {
+  border-bottom: 1px solid rgba(48, 50, 71, 0.1);
+}
+
+.header__title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.loans {
+  border: 1px solid rgba(48, 50, 71, 0.1);
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.loans__wrapper {
+  padding-bottom: 38px;
+}
+.loans + .loans {
+  margin-top: 32px;
+}
+.loans__title {
+  font-size: 25px;
+  line-height: 30px;
+  padding-bottom: 16px;
+}
+.loans__btn {
+  padding: 16px 32px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #f6e308;
+  border: none;
+  font-size: 20px;
+}
+.loans__invest {
+  font-size: 16px;
+  color: #51a571;
+  text-align: end;
+  padding-bottom: 13px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+.total__text {
+  padding-right: 10px;
+}
+
+@media (max-width: 590px) {
+  .header__title {
+    font-size: 22px;
+  }
+  .loans__title {
+    font-size: 22px;
+  }
+  .loans__subtitle {
+    font-size: 16px;
+  }
+  .loans__btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .loans__invest {
+    font-size: 13px;
+  }
+  .total {
+    font-size: 16px;
+  }
+}
+@media (max-width: 497px) {
+  .container {
+    padding: 32px 40px;
+  }
+  .total {
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .loans {
+    flex-direction: column;
+  }
+  .loans__invest {
+    text-align: start;
+    padding-bottom: 0px;
+  }
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,56 @@
+@import "../style/fonts";
+@import "../style/vars";
+@import "../style/global";
+
+.header__title {
+  font-size: 30px;
+  line-height: 36px;
+  @extend %inter-semibold;
+}
+
+.loans {
+  border: 1px solid rgba(48, 50, 71, 0.1);
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  &__wrapper {
+    padding-bottom: 38px;
+  }
+  & + .loans {
+    margin-top: 32px;
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 16px;
+    @extend %inter-semibold;
+  }
+  &__btn {
+    padding: 16px 32px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #f6e308;
+    border: none;
+    font-size: 20px;
+    @extend %inter-medium;
+  }
+  &__invest {
+    font-size: 16px;
+    @extend %inter-semibold;
+    color: #51a571;
+    text-align: end;
+    padding-bottom: 13px;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  @extend %inter-semibold;
+  &__text {
+    padding-right: 10px;
+  }
+}
+
+@import "../style/media";
