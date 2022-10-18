@@ -13,7 +13,6 @@ function Loan(props) {
           <p>tranche: {props.loan.tranche}</p>
           <p>available: {props.loan.available}</p>
           <p>annualised return: {props.loan.annualised_return}</p>
-          <p>term_remaining: {props.loan.term_remaining}</p>
           <p>ltv: {props.loan.ltv}</p>
         </div>
       </div>

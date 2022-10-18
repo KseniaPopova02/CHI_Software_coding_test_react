@@ -7,9 +7,11 @@ import "./style/App.css";
 import Data from "../Data/current-loans.json";
 function App() {
   let reduceValue = 0;
-  let totalValue = Data.loans.reduce((previousValue, loan) => {
-    return previousValue + parseFloat(loan.available.replace(",", ""));
+  let totalValueNum = Data.loans.reduce((previousValue, loan) => {
+    return previousValue + parseFloat(loan.available.replace(",", "."));
   }, reduceValue);
+  let totalValueNumRound = totalValueNum.toFixed(3);
+  let totalValue = `$${totalValueNumRound}`;
 
   return (
     <div>

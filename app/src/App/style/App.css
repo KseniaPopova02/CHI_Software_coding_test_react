@@ -105,6 +105,9 @@ body {
   border: none;
   font-size: 20px;
 }
+.loans__btn:hover {
+  background-color: #ffef3d;
+}
 .loans__invest {
   font-size: 16px;
   color: #51a571;
@@ -197,10 +200,9 @@ body {
   font-weight: 600;
   font-size: 35px;
   line-height: 42px;
-  padding-bottom: 32px;
 }
 .loan__popup-suptitle {
-  padding-bottom: 32px;
+  padding-bottom: 10px;
 }
 .loan__popup-info p {
   padding-bottom: 8px;
@@ -224,6 +226,7 @@ body {
   border-radius: 5px;
   text-align: left;
   padding-left: 32px;
+  font-size: 22px;
 }
 
 @media (max-width: 1040px) {

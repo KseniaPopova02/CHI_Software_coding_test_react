@@ -34,6 +34,9 @@
     border: none;
     font-size: 20px;
     @extend %inter-medium;
+    &:hover {
+      background-color: #ffef3d;
+    }
   }
   &__invest {
     font-size: 16px;
@@ -132,10 +135,9 @@
     font-weight: 600;
     font-size: 35px;
     line-height: 42px;
-    padding-bottom: 32px;
   }
   &-suptitle {
-    padding-bottom: 32px;
+    padding-bottom: 10px;
   }
   &-info {
     p {
@@ -162,6 +164,7 @@
     border-radius: 5px;
     text-align: left;
     padding-left: 32px;
+    font-size: 22px;
   }
 }
 

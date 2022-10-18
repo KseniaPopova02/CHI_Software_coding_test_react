@@ -1,6 +1,6 @@
 function LoanPopup(props) {
-  console.log(props);
-  const timeRemaining = props.loan.term_remaining;
+  const timeRemainingNum = Math.ceil(Number(props.loan.term_remaining) / 86400);
+  const timeRemaining = `${timeRemainingNum} days`;
 
   return (
     <div className={`loan__popup ${props.show ? "loan__popup-show" : ""}`}>
