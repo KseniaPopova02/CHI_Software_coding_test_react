@@ -1,5 +1,8 @@
+import LoanPopup from "../LoanPopup/LoanPopup";
+import { useState } from "react";
 function Loan(props) {
-  console.log(props);
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <div className="loans">
       <div className="loans__text">
@@ -17,8 +20,20 @@ function Loan(props) {
       <div className="loans__btn-wrapper">
         {props.loan.invested > 0 && <p className="loans__invest">Invested</p>}
 
-        <button className="loans__btn">invest</button>
+        <button
+          className="loans__btn"
+          onClick={() => {
+            setShowPopup(!showPopup);
+          }}
+        >
+          invest
+        </button>
       </div>
+      <LoanPopup
+        loan={props.loan}
+        show={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </div>
   );
 }

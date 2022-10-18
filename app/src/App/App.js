@@ -3,10 +3,14 @@ import LoanWrapper from "../LoanWrapper/LoanWrapper";
 import Loan from "../Loan/Loan";
 import Total from "../Total/Total";
 import "./style/App.css";
-import LoanPopup from "../LoanPopup/LoanPopup";
+
 import Data from "../Data/current-loans.json";
 function App() {
-  console.log(Data);
+  let reduceValue = 0;
+  let totalValue = Data.loans.reduce((previousValue, loan) => {
+    return previousValue + parseFloat(loan.available.replace(",", ""));
+  }, reduceValue);
+
   return (
     <div>
       <Header></Header>
@@ -16,11 +20,13 @@ function App() {
             return <Loan key={loan.id} loan={loan}></Loan>;
           })}
         </LoanWrapper>
-        <Total></Total>
-        <LoanPopup></LoanPopup>
+        <Total totalValue={totalValue}></Total>
       </div>
     </div>
   );
 }
+
+//put class on body (modal open/ close)
+//put class on html no-scroll
 
 export default App;

@@ -1,21 +1,29 @@
 function LoanPopup(props) {
   console.log(props);
+  const timeRemaining = props.loan.term_remaining;
+
   return (
-    <div class="loan__popup">
+    <div className={`loan__popup ${props.show ? "loan__popup-show" : ""}`}>
       <div className="loan__popup-wrapper">
         <div className="loan__popup-cross">
-          <button href="#"></button>
+          <button
+            href="#"
+            onClick={() => {
+              props.setShowPopup(false);
+            }}
+          ></button>
         </div>
         <div className="loan__popup-text">
           <div className="loan__popup-title">
             <p>Invest in Loan</p>
           </div>
           <div className="loan__popup-suptitle">
-            <p>Loan title you’ve clicked</p>
+            <p>Loan title you’ve clicked:</p>
+            <p>{props.loan.title}</p>
           </div>
           <div className="loan__popup-info">
-            <p>Amount available: $12,362</p>
-            <p>Loan ends in: 1 month 10 days</p>
+            <p>Amount available: {props.loan.amount}</p>
+            <p>Loan ends in: {timeRemaining}</p>
           </div>
         </div>
         <div className="loan__investment">
