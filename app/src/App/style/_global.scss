@@ -30,17 +30,8 @@ h6 {
 }
 
 body {
-  @extend %inter-medium;
   position: relative;
   color: #303247;
   font-size: 20px;
   line-height: 24px;
-}
-
-.container {
-  padding: 32px 64px;
-}
-
-.border__bottom {
-  border-bottom: 1px solid rgba(48, 50, 71, 0.1);
 }

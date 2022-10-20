@@ -1,7 +1,8 @@
-import Header from "../Header/Header";
-import LoanWrapper from "../LoanWrapper/LoanWrapper";
-import Loan from "../Loan/Loan";
-import Total from "../Total/Total";
+import styled from "styled-components";
+import Header from "../components/Header/Header";
+import LoanWrapper from "../components/LoanWrapper/LoanWrapper";
+import Loan from "../components/Loan/Loan";
+import Total from "../components/Total/Total";
 import "./style/App.css";
 
 import Data from "../Data/current-loans.json";
@@ -12,18 +13,24 @@ function App() {
   }, reduceValue);
   let totalValueNumRound = totalValueNum.toFixed(3);
   let totalValue = `$${totalValueNumRound}`;
+  let Container = styled.div`
+    padding: 32px 64px;
+    @media (max-width: 497px) {
+      padding: 32px 40px;
+    }
+  `;
 
   return (
     <div>
       <Header></Header>
-      <div className="container">
+      <Container>
         <LoanWrapper>
           {Data.loans.map((loan) => {
-            return <Loan key={loan.id} loan={loan}></Loan>;
+            return <Loan key={loan.id} loan={loan} />;
           })}
         </LoanWrapper>
         <Total totalValue={totalValue}></Total>
-      </div>
+      </Container>
     </div>
   );
 }
